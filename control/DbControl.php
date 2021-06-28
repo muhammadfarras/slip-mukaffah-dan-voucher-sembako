@@ -3,7 +3,7 @@
 require_once __DIR__."\..\aset\Configuration.php";
 require_once __DIR__."\JsonR.php";
 
-require '../vendor/autoload.php';
+
 
 
 

@@ -119,8 +119,8 @@ function runAjaxCheckFileCsv(path,fileName){
 
 	    if (this.readyState == 4 && this.status == 200) {
 
-	   		// console.log (this.responseText);
-	      	savedList =  JSON.parse(this.responseText);
+	   		console.log (this.responseText);
+	      	// savedList =  JSON.parse(this.responseText);
 
 	      	// console.log(savedList);
 
