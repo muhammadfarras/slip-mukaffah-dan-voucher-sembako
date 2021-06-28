@@ -92,9 +92,10 @@ Setelah folder RAR didownload, langkah selanjutnya tekan kembali tombol proses u
 </li>
 
 <li><b>PDF send to target email</b>
-  Slip Mukafaah dan Voucher Sembako terkirim melalui Email
 
-	![enam](media/06-email.gif)
+Slip Mukafaah dan Voucher Sembako terkirim melalui Email
+
+![enam](media/06-email.gif)
   
 </li>
 </ul>
