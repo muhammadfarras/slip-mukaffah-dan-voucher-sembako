@@ -2,6 +2,12 @@
 error_reporting(E_ERROR);
 require_once __DIR__."\..\aset\Configuration.php";
 require_once __DIR__."\JsonR.php";
+
+require '../vendor/autoload.php';
+
+
+
+
 /**
  * 
  */
@@ -16,11 +22,15 @@ class DbControl
 	function __construct()
 	{
 		
+		$dotenv = Dotenv\Dotenv::createImmutable(__DIR__."/..");
+		$dotenv->load();
+
+
 		$this->mysqli = new mysqli (
-			Configuration::$HOST,
-			Configuration::$USERNAME,
-			Configuration::$PASSWORD,
-			Configuration::$DB);
+			$_ENV['HOST'],
+			$_ENV['USERNAME'],
+			$_ENV['PASSWORD'],
+			$_ENV['DB']);
 
 		// check connection
 
