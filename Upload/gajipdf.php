@@ -174,6 +174,7 @@ $hari = date("N");
    
     .table-info {
       border-collapse: collapse;
+      /*background-color: #cad7ed;*/
       /*border: 1px solid;*/
       /*width: 8%;*/
       /*width: 100%;*/
@@ -184,13 +185,17 @@ $hari = date("N");
     }
 
     .td-w {
-      width: 60%;
+      padding-right: 10px;
+      width: auto;
+      white-space: nowrap;
     }
 
     .rincian-gaji td, .rincian-gaji th {
       /*padding-top: 5px;*/
       /*padding-bottom: : 5px;*/
-      /*border*/: 1px solid black;
+      /*border: 1px solid black;*/
+      /*border-collapse: collapse;
+      border: 1px solid;*/
     }
 
     .table-info td , .table-info th{
@@ -204,6 +209,7 @@ $hari = date("N");
     }
 
     .rincian-gaji {
+
       width: 100%;
     }
 
@@ -402,7 +408,7 @@ $hari = date("N");
 
           <tr>
             <td colspan="2" style="width: 75%;" class="sub-head"><b>A1. Gaji Pokok</b></td>
-            <td colspan="2" class="td-nominal"><?php echo ": Rp".number_format($item[18],null,null,".");?></td>
+            <td colspan="2" class="td-nominal"><?php echo ": Rp".number_format((int)$item[18],null,null,".");?></td>
           </tr>
 
           <tr>
@@ -414,62 +420,62 @@ $hari = date("N");
 
           <tr>
             <td class="sub-1">Tunjangan Jabatan</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[19],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[19],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Istri Anak</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[20],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[20],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Transport</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[21],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[21],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Wali Kelas</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[22],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[22],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Hafalan</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[23],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[23],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Perumahan</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[24],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[24],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Kesehatan</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[25],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[25],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Kelahiran</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[26],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[26],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Hari Raya</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[38],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[38],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Uang Makan</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[28],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[28],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Insentif</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[29],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[29],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Lembur</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[27],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[27],null,null,".");?></td>
           </tr>
 
           <!-- Sub total A2 -->
@@ -477,7 +483,7 @@ $hari = date("N");
           <tr>
             <td colspan="2" class="sub-1 sub-total-name">Sub total tunjangan tunai</td>
             
-            <td colspan="2" class="td-nominal"><?php echo ": Rp".number_format($item[48],null,null,".");?></td>
+            <td colspan="2" class="td-nominal"><?php echo ": Rp".number_format((int)$item[48],null,null,".");?></td>
           </tr>
 
 
@@ -487,34 +493,34 @@ $hari = date("N");
 
           <tr>
             <td class="sub-1">Fasilitas Makan Siang</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[32],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[32],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Pendidikan Anak</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[33],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[33],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Tunjangan Sembako</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[30],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[30],null,null,".");?></td>
           </tr>
 
           <tr>
             <td class="sub-1">Tunjangan Tunjangan Komunikasi</td>
-            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[31],null,null,".");?></td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[31],null,null,".");?></td>
           </tr>
 
 
           <tr>
             <td colspan="2" class="sub-1 sub-total-name">Sub total tunjangan non tunai</td>
             
-            <td colspan="2" class="td-nominal"><?php echo ": Rp".number_format($item[49],null,null,".");?></td>
+            <td colspan="2" class="td-nominal"><?php echo ": Rp".number_format((int)$item[49],null,null,".");?></td>
           </tr>
 
           <tr class="tr-sub-total">
             <td colspan="3"><b>Sub Total (A1+A2+A3)</b></td>
-            <td class="td-nominal"><b><?php echo "Rp".number_format(($item[18]+$item[48]+$item[49]),null,null,".");?></b></td>
+            <td class="td-nominal"><b><?php echo "Rp".number_format(((int)$item[18]+(int)$item[48]+(int)$item[49]),null,null,".");?></b></td>
           </tr>
           <tr><td class="sub-1"></td></tr>
 
@@ -525,14 +531,14 @@ $hari = date("N");
           <!-- Angsuran pinjaman ke -1 -->
           <tr><td class="sub-1">Angsuran ke - </td><td colspan="3" class="td-nominal"><?php echo "&nbsp; ".$item[50]?></td></tr>
 
-          <tr><td class="sub-1">Sisa pinjaman 1</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[52],null,null,".");?></td></tr>
+          <tr><td class="sub-1">Sisa pinjaman 1</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[52],null,null,".");?></td></tr>
 
           <tr>
             <td class="sub-1">Potongan pinjaman 1</td>
             <td class="td-nominal">
               
             </td>
-            <td colspan="2"><?php echo ": Rp".number_format($item[51],null,null,".");?></td>
+            <td colspan="2"><?php echo ": Rp".number_format((int)$item[51],null,null,".");?></td>
           </tr>
 
 
@@ -543,14 +549,14 @@ $hari = date("N");
           <tr><td class="sub-1">Angsuran ke - </td><td colspan="3" class="td-nominal"><?php echo "&nbsp; ".$item[53]?></td></tr>
 
 
-          <tr><td class="sub-1">Sisa pinjaman 2</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format($item[55],null,null,".");?></td></tr>
+          <tr><td class="sub-1">Sisa pinjaman 2</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[55],null,null,".");?></td></tr>
           
 
           <tr>
             <td class="sub-1">Potongan pinjaman 2</td>
             <td class="td-nominal"></td>
             <td colspan="2">
-              <?php echo ": Rp".number_format($item[54],null,null,".");?>
+              <?php echo ": Rp".number_format((int)$item[54],null,null,".");?>
             </td>
           </tr>
 
@@ -562,7 +568,7 @@ $hari = date("N");
             <td colspan="2" style="width: 75%;" class="c-gray"><b><span>B3. Potongan Pendidikan Anak</span></b>
             </td>
             <td colspan="2">
-              <?php echo ": Rp".number_format(($item[43]),null,null,".");?>
+              <?php echo ": Rp".number_format(((int)$item[43]),null,null,".");?>
             </td>
           </tr>
 
@@ -570,21 +576,21 @@ $hari = date("N");
               <td colspan="4" class="c-gray"><b><span>B4. Pengambilan Tunjangan Non Tunai</span></b></td>
           </tr>
           <tr>
-            <td class="sub-1">Fasilitas Makan Siang</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format(($item[32]),null,null,".");?></td>
+            <td class="sub-1">Fasilitas Makan Siang</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format(((int)$item[32]),null,null,".");?></td>
           </tr>
           <tr>
-            <td class="sub-1">Bantuan Pendidikan Anak</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format(($item[33]),null,null,".");?></td>
+            <td class="sub-1">Bantuan Pendidikan Anak</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format(((int)$item[33]),null,null,".");?></td>
           </tr>
           <tr>
-            <td class="sub-1">Tunjangan Sembako</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format(($item[30]),null,null,".");?></td>
+            <td class="sub-1">Tunjangan Sembako</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format(((int)$item[30]),null,null,".");?></td>
           </tr>
           <tr>
-            <td class="sub-1">Tunjangan Komunikasi</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format(($item[31]),null,null,".");?></td>
+            <td class="sub-1">Tunjangan Komunikasi</td><td colspan="3" class="td-nominal"><?php echo ": Rp".number_format(((int)$item[31]),null,null,".");?></td>
           </tr>
           <tr>
             <td colspan="2" class="sub-1"><b>Sub Total Tunjangan Non Tunai</b></td>
             <td colspan="2">
-              <?php echo ": Rp".number_format(($item[32]+$item[33]+$item[30]+$item[31]),null,null,".");?>
+              <?php echo ": Rp".number_format(((int)$item[32]+(int)$item[33]+(int)$item[30]+(int)$item[31]),null,null,".");?>
             </td>
           </tr>
 
@@ -593,15 +599,15 @@ $hari = date("N");
 
           <tr class="tr-sub-total">
             <td colspan="3"><b>Sub Total (B1+B2+B3+B4)</b></td>
-            <td class="td-nominal"><b><?php echo "Rp".number_format(($item[51]+$item[54]+$item[43]+($item[32]+$item[33]+$item[30]+$item[31])),null,null,".");?></b></td>
+            <td class="td-nominal"><b><?php echo "Rp".number_format(((int)$item[51]+(int)$item[54]+(int)$item[43]+((int)$item[32]+(int)$item[33]+(int)$item[30]+(int)$item[31])),null,null,".");?></b></td>
           </tr>
 
           <tr><td class="sub-1"><br></td></tr>
           <tr class="tr-sub-total-final">
             <td colspan="3"><b>Mukafaah Bersih Tunai (Sub Total A - Sub Total B)</b></td>
             <td class="td-nominal"><b><?php echo "Rp".number_format(
-              ($item[18]+$item[48]+$item[49])
-              -($item[51]+$item[54]+$item[43]+($item[32]+$item[33]+$item[30]+$item[31]))
+              ((int)$item[18]+(int)$item[48]+(int)$item[49])
+              -((int)$item[51]+(int)$item[54]+(int)$item[43]+(int)($item[32]+(int)$item[33]+(int)$item[30]+(int)$item[31]))
               ,null,null,".");?></b></td>
           </tr>
       </table>

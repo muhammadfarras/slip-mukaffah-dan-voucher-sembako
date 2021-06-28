@@ -164,13 +164,14 @@ savedList = runAjaxCheckFileCsv(nodePath,nodeFileName);
 // createing function that run ajax multiple time to create pdf and store to database
 function ProsessPdf(items, path){
 
+console.log (encodeURIComponent(items));
 	var xhttp = new XMLHttpRequest();
   	xhttp.onreadystatechange = function() {
 
 	    if ((this.readyState == 4) && (this.status == 200)){
-				// console.log (this.responseText);
+				console.log (this.responseText);
 	    	jumlahDataBerjalan += parseInt(this.responseText);
-	    	// console.log (jumlahDataBerjalan);
+	    	// console.log (items);
 	    	nodeLog.innerHTML = jumlahDataBerjalan+" file telah terbuat.";
 
 	    	var prosentase  = ((jumlahDataBerjalan/banyakDataGlobal)*100)+"%";
@@ -209,7 +210,7 @@ function ProsessPdf(items, path){
 	    	}
 	    }
 	  };
-	  xhttp.open("GET", "createpdf.php?data="+items+"&path="+path, true);
+	  xhttp.open("GET", "createpdf.php?data="+	encodeURIComponent(items) +"&path="+path+"&time="+Math.random(), true);
 	  xhttp.send();
 }
 
