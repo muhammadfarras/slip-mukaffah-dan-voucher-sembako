@@ -112,3 +112,4 @@ Slip Mukafaah dan Voucher Sembako terkirim melalui Email
 - [PHPMAILER](https://github.com/PHPMailer/PHPMailer)
 - [PHPDOTENV](https://github.com/vlucas/phpdotenv)
 - [Bootstrap](https://github.com/twbs/bootstrap)
+- [Chart Js] (https://github.com/chartjs/Chart.js)
