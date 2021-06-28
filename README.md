@@ -1,4 +1,12 @@
-<h1>Sistem Sm&Vs (Slip Mukafaah & Voucher Sembako</h1>
+<h1>Sistem Sm&Vs (Slip Mukafaah & Voucher Sembako)</h1>
+
+## Daftar Isi
+- [Latar Belakang](#Latar-Belakang)
+- [Cara Memasang Sistem di Komputer](#Cara-memasang-Sm&Vs)
+- [Fitur Yang Disediakan](#Fitur-dari-Sm&Vs)
+- [Cara Penggunaan](#Cara-Menggunakan)
+- [Library Yang Digunakan](#Library-yang-digunakan)
+
 
 ## Latar Belakang
 Tempat saya berkerja saat ini (YPIIAH) selain memberikan gaji berupa uang juga diberikan kepada setiap pegawai
@@ -99,3 +107,5 @@ Slip Mukafaah dan Voucher Sembako terkirim melalui Email
   
 </li>
 </ul>
+
+## Library yang digunakan
