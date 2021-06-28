@@ -160,7 +160,7 @@ include ("config.php");
 
 <script>
 
-	var monthSelected = parseInt('03')-1;
+	var monthSelected = parseInt('06')-1;
 	var yearSelected = parseInt('2021');
 
 	var timeSembako = moment().set({
