@@ -16,21 +16,29 @@ https://github.com/muhammadfarras/slip-mukaffah-dan-voucher-sembako.git
 </table>
 
 ## How to use
-1. Download formated file form main page
+<ol>
+<li>
+<p>Download formated file form main page</p>
 ![satu](media/01-download.gif)
+</li>
 
-2. Settingup file and file name
+<li><p>Settingup file and file name</p>
 ![dua](media/02-setting-file.gif)
+</li>
 
-3. Upload your file that you edited to the upload form
+<li><p>Upload your file that you edited to the upload form</p>
 ![tiga](media/03-upload.gif)
+</li>
 
-4. Generate data to PDF
+<li><p>Generate data to PDF</p>
 ![empat](media/04-generate.gif)
+</li>
 
-5. Follow other instruction until its finish
+<li><p>Follow other instruction until its finish</p>
 ![lima](media/05-save-db-email.gif)
+</li>
 
-6. PDF send to target email
+<li><p>PDF send to target email</p>
 ![enam](media/06-email.gif)
+</li>
 
