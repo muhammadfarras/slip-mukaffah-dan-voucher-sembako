@@ -22,7 +22,7 @@ sleep($time);
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SDIT Anak Shalih Bogor | Bukti Registrasi Peserta PPDB TP 2021-2022</title>
+  <title>YPIIAH | Slip Gaji & Voucher Sembako</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
   <style>
@@ -126,7 +126,7 @@ sleep($time);
                           <li>Pastikan sembako yang diterima sesuai dengan yang tertera didalam file PDF dan data dari petugas Minimart Anak Shalih.</li>
                         </ol>
                         <br><br>
-                        <p style="Margin:0;font-size:14px;font-family:'Questrial';line-height:21px;color:#666666">Atas perhatian kerjasama Bapak/Ibu, kami ucapkan terima kasih, jazakumullahu khairan.<br><br>Hormat kami,<br><br><br>Unit Usaha Anak Shalih Bogor<br>Yayasan Imam Ahmad bin Hanbal</p></td>
+                        <p style="Margin:0;font-size:14px;font-family:'Questrial';line-height:21px;color:#666666">Atas perhatian kerjasama Bapak/Ibu, kami ucapkan terima kasih, jazakumullahu khairan.<br><br>Hormat kami,<br><br><br>Departemen Sumber Daya Manusia<br>Yayasan Imam Ahmad bin Hanbal</p></td>
                      </tr>
                    </tbody></table></td>
                  </tr>
@@ -334,7 +334,7 @@ $mail->isHTML(true);
 //Provide file path and name of the attachments
 $mail->addAttachment($namaFile."/".$data[2]."-".$data[1].".pdf",$data[1].".pdf");
 
-$mail->Subject = "[Slip & Voucher Sembako SDIT Anak Shalih Bogor]";
+$mail->Subject = "[UJI COBA | Slip mukafaah & Voucher sembako YPIIAH]";
 $mail->Body = $html;
 $mail->AltBody = "This is the plain text version of the email content";
 
