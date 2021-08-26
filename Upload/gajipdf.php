@@ -480,10 +480,14 @@ $hari = date("N");
 
           <!-- Sub total A2 -->
 
+          <?php 
+          $totalTunjanganTunai = $item[19]+$item[20]+$item[21]+$item[22]+$item[23]+$item[24]+$item[25]+$item[26]+$item[38]+$item[28]+$item[29]+$item[27];
+          ?>
+
           <tr>
             <td colspan="2" class="sub-1 sub-total-name">Sub total tunjangan tunai</td>
             
-            <td colspan="2" class="td-nominal"><?php echo ": Rp".number_format((int)$item[48],null,null,".");?></td>
+            <td colspan="2" class="td-nominal"><?php echo ": Rp".number_format((int)$totalTunjanganTunai,null,null,".");?></td>
           </tr>
 
 
@@ -520,7 +524,11 @@ $hari = date("N");
 
           <tr class="tr-sub-total">
             <td colspan="3"><b>Sub Total (A1+A2+A3)</b></td>
-            <td class="td-nominal"><b><?php echo "Rp".number_format(((int)$item[18]+(int)$item[48]+(int)$item[49]),null,null,".");?></b></td>
+
+            <?php
+            $subTotalGaji = $item[18]+$totalTunjanganTunai+(int)$item[49];
+            ?>
+            <td class="td-nominal"><b><?php echo "Rp".number_format(((int)$subTotalGaji),null,null,".");?></b></td>
           </tr>
           <tr><td class="sub-1"></td></tr>
 
@@ -590,7 +598,10 @@ $hari = date("N");
           <tr>
             <td colspan="2" class="sub-1"><b>Sub Total Tunjangan Non Tunai</b></td>
             <td colspan="2">
-              <?php echo ": Rp".number_format(((int)$item[32]+(int)$item[33]+(int)$item[30]+(int)$item[31]),null,null,".");?>
+              <?php 
+              $subTotalTunjanganNonTunai = $item[32]+(int)$item[33]+(int)$item[30]+(int)$item[31];
+              ?>
+              <?php echo ": Rp".number_format(((int)$subTotalTunjanganNonTunai),null,null,".");?>
             </td>
           </tr>
 
@@ -599,15 +610,18 @@ $hari = date("N");
 
           <tr class="tr-sub-total">
             <td colspan="3"><b>Sub Total (B1+B2+B3+B4)</b></td>
-            <td class="td-nominal"><b><?php echo "Rp".number_format(((int)$item[51]+(int)$item[54]+(int)$item[43]+((int)$item[32]+(int)$item[33]+(int)$item[30]+(int)$item[31])),null,null,".");?></b></td>
+            <?php
+            $subTotalPengurang = $item[51]+(int)$item[54]+(int)$item[43]+$subTotalTunjanganNonTunai;
+            ?>
+            <td class="td-nominal"><b><?php echo "Rp".number_format(((int)$subTotalPengurang),null,null,".");?></b></td>
           </tr>
 
           <tr><td class="sub-1"><br></td></tr>
           <tr class="tr-sub-total-final">
             <td colspan="3"><b>Mukafaah Bersih Tunai (Sub Total A - Sub Total B)</b></td>
             <td class="td-nominal"><b><?php echo "Rp".number_format(
-              ((int)$item[18]+(int)$item[48]+(int)$item[49])
-              -((int)$item[51]+(int)$item[54]+(int)$item[43]+(int)($item[32]+(int)$item[33]+(int)$item[30]+(int)$item[31]))
+              ((int)$subTotalGaji)
+              -((int)$subTotalPengurang)
               ,null,null,".");?></b></td>
           </tr>
       </table>
