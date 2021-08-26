@@ -1,7 +1,11 @@
 <?php
 ob_start();
 
+require_once __DIR__.'\../vendor/autoload.php';
 
+// ENV for Email
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__."/..");
+$dotenv->load();
 
 $namaFile = $_GET['path'];
 $data = json_decode($_GET['data']);
@@ -313,8 +317,8 @@ $mail->SMTPAuth = true;
 
 
 //Provide username and password
-$mail->Username = "farras@anakshalihbogor.sch.id";
-$mail->Password = "farras2712";
+$mail->Username = $_ENV["EMAIL"];
+$mail->Password = $_ENV["PASSWORD_EMAIL"];
 // $mail->Username = "postmaster@sandbox9c5543197acc4e2eb976f5e2fd1b0f47.mailgun.org";
 // $mail->Password = "454f64e3cdb272b1dc2d644fe44c1433-73e57fef-5af35af9";
 
@@ -325,7 +329,7 @@ $mail->SMTPSecure = "tls";
 //Set TCP port to connect to
 $mail->Port = 587;
 
-$mail->From = "farras@anakshalihbogor.sch.id";
+$mail->From = "sdm@ypiiah.id";
 $mail->FromName = "SDM YPIIAH";
 
 $mail->addAddress($data[4]);
@@ -333,7 +337,7 @@ $mail->isHTML(true);
 //Provide file path and name of the attachments
 $mail->addAttachment($namaFile."/".$data[2]."-".$data[1].".pdf",$data[1].".pdf");
 
-$mail->Subject = "[UJI COBA | Slip mukafaah & Voucher sembako YPIIAH]";
+$mail->Subject = "[Slip mukafaah & Voucher sembako YPIIAH]";
 $mail->Body = $html;
 $mail->AltBody = "This is the plain text version of the email content";
 
