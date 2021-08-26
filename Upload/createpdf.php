@@ -9,6 +9,7 @@ $time = $_GET['time'];
 
 
 
+
 // ["add-07-2021","Abbas Kiri","1434.07.23.01","SDIT Anak Shalih","farras@anakshalihbogor.sch.id","L","Tetap","Guru&guru","0","0","0","0","0","K-4","0","IIA","8","3","1200000","0","400000","400000","0","250000","287500","0","0","0","0","0","289400","0","315000","1176500","0","0","0","0","0","0","0","","500000","307666","0","4318400","2229834","1729834","4000000","4000000","1","500000","4500000","0","0","0","0","0","0","Beras 'Melati Setra Ramos' (kg)","15","Minyak Goreng 'Sania' (liter)","2","Gula Pasir GMP (kg)","2","Terigu 'Sania' (kg)","1","Mentega 'Blue Band' Serbaguna (sachet 200 gr)","1","Saos Sambal Ekstra Pedas 'Sasa' (botol 340 ml)","1","Kecap 'Bango' (pouch 520 ml)","1","Kantong Plastik 'Loco'","1"]
 
 /*-- Unit Testing Dengan Sembak0 --*/

@@ -372,7 +372,7 @@ $hari = date("N");
 
         <tr>
           <td class="sub-info td-w f-12">Status Keluarga</td>
-          <td class="f-12"><?php echo ": ".$item[9]?></td>
+          <td class="f-12"><?php echo ": ".$item[13]?></td>
         </tr>
 
 
@@ -389,10 +389,10 @@ $hari = date("N");
           </tr>
           <tr >
             <td><span class="ul">Cuti</span><br><?php echo $item[8]?> hari</td>
-            <td><span class="ul">Sakit</span><br><?php echo $item[8]?> hari</td>
-            <td><span class="ul">Alpa</span><br><?php echo $item[8]?> hari</td>
-            <td><span class="ul">Terlambat</span><br><?php echo $item[8]?> kali</td>
-            <td><span class="ul">Pulang Lebih Awal</span><br><?php echo $item[8]?> kali</td>
+            <td><span class="ul">Sakit</span><br><?php echo $item[9]?> hari</td>
+            <td><span class="ul">Alpa</span><br><?php echo $item[10]?> hari</td>
+            <td><span class="ul">Terlambat</span><br><?php echo $item[11]?> kali</td>
+            <td><span class="ul">Pulang Lebih Awal</span><br><?php echo $item[12]?> kali</td>
           </tr>
         </table>
       </div>
