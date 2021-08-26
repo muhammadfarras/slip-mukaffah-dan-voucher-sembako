@@ -358,7 +358,7 @@ while ($isRun){
             "count" => 1,
             "send" => 0,
             "fail" => 1,
-            "nama" => $data[1],
+            "nama" => $data[1]. "Email ".$data[4],
             "Percobaan - ke " => $numberLoops
             ));
 
