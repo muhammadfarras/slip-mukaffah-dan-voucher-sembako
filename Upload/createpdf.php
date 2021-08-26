@@ -154,7 +154,7 @@ ob_clean();
 
         for ($i = 0 ; $i < count($barangs) ; $i++){
 
-            if (($barangs[$i][0] <> "") && $barangs[$i][1] <>"" ){
+            if (($barangs[$i][0] <> "") && ($barangs[$i][1] <> "" && $barangs[$i][1] <> 0 )){
               echo "<tr><td>".$barangs[$i][0]."</td><td>".$barangs[$i][1]."</td></tr>";
             }
 
