@@ -270,11 +270,11 @@ if ($adaSembako){
 
   
   // Untuk pengembangan di uncomment
-  $mpdf->Output();
+  // $mpdf->Output();
 
 
-  // $mpdf->Output($namaFile,'F');
-  // echo 1;
+  $mpdf->Output($namaFile,'F');
+  echo 1;
 
 
 ?>
