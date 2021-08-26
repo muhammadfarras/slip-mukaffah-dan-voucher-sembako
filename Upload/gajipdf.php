@@ -388,11 +388,11 @@ $hari = date("N");
             <td colspan="6">Absensi</td>
           </tr>
           <tr >
-            <td><span class="ul">Cuti</span><br><?php echo $item[8]?> hari</td>
-            <td><span class="ul">Sakit</span><br><?php echo $item[9]?> hari</td>
-            <td><span class="ul">Alpa</span><br><?php echo $item[10]?> hari</td>
-            <td><span class="ul">Terlambat</span><br><?php echo $item[11]?> kali</td>
-            <td><span class="ul">Pulang Lebih Awal</span><br><?php echo $item[12]?> kali</td>
+            <td><span class="ul">Cuti</span><br><?php echo $item[8]?></td>
+            <td><span class="ul">Sakit</span><br><?php echo $item[9]?></td>
+            <td><span class="ul">Alpa</span><br><?php echo $item[10]?></td>
+            <td><span class="ul">Terlambat</span><br><?php echo $item[11]?></td>
+            <td><span class="ul">Pulang Lebih Awal</span><br><?php echo $item[12]?></td>
           </tr>
         </table>
       </div>
