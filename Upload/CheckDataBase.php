@@ -107,7 +107,15 @@ else {
 
 			if ($value != "|"){
 
-				$db->insertDaftarSembako ($primaryKey,$value);
+				// explode barang, memisahkan nama barang dan jumlah barang
+				$expBarang = explode("|", $value);
+
+				// check apakah jumlah sembakonya kosong atau nol
+				// jika tidak kosong atau tidak nol maka masukan nilai kedalam basis data
+
+				if ($expBarang[1] != "" && $expBarang[1] != 0){
+					$db->insertDaftarSembako ($primaryKey,$value);
+				}	
 
 			}
 		}
