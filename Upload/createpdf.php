@@ -16,12 +16,13 @@ $time = $_GET['time'];
 // ["add-07-2021","Abbas Kiri","1434.07.23.01","SDIT Anak Shalih","farras@anakshalihbogor.sch.id","L","Tetap","Guru","0","0","0","0","0","K-4","0","IIA","8","3","1200000","0","400000","400000","0","250000","287500","0","0","0","0","0","289400","0","315000","1176500","0","0","0","0","0","0","0","","500000","307666","0","4318400","2229834","1729834","4000000","4000000","1","500000","4500000","0","0","0","0","0","0","Beras 'Melati Setra Ramos' (kg)","15","Minyak Goreng 'Sania' (liter)","2","Gula Pasir GMP (kg)","2","Terigu 'Sania' (kg)","1","Mentega 'Blue Band' Serbaguna (sachet 200 gr)","1","Saos Sambal Ekstra Pedas 'Sasa' (botol 340 ml)","1","Kecap 'Bango' (pouch 520 ml)","1","Kantong Plastik 'Loco'","1"]
 
 
-/*-- Unit Testing Tanpa Sembakp --*/
-// ["add-07-2021","Abbas Kiri","1434.07.23.01","SDIT Anak Shalih","farras@anakshalihbogor.sch.id","L","Tetap","Guru","0","0","0","0","0","K-4","0","IIA","8","3","1200000","0","400000","400000","0","250000","287500","0","0","0","0","0","289400","0","315000","1176500","0","0","0","0","0","0","0","","500000","307666","0","4318400","2229834","1729834","4000000","4000000","1","500000","4500000","0","0","0","0","0","0"]
+/* Unit Testing penambahan dompet pendidikan */
+// ["add-09-2021","latihan september 3","1945-3","SDIT Anak Shalih","farras@anakshalihbogor.sch.id","L","Tetap","Kepala Divisi ","0","0","0","","","K-4","0","IIIA","4","0","1450000","650000","400000","400000","0","0","460000","0","0","0","0","0","295300","79000","300000","1595037","733","0","","0","0","0","0","0","0","0","1107194","0","6196572","733","2820041","2820041","2820041","2269337","733","0","0","0","0","0","0","567235","Beras 'Sania' (kg)","15","Minyak Goreng 'Sania' (kg)","2","Gula Pasir 'GMP' (kg)","2","Tepung Terigu 'Sania' (kg)","1","Mentega 'Simas Palmia' (200 gr)","1","Saos Sambal Ekstra Pedas 'Sasa' (botol 340 ml)","1","Kecap 'Bango' (pouch 520 ml)","1","Kantong Plastik 'Loco'","1"]
+
 
 require_once __DIR__."/../control/KodeControl.php";
 
-// 59 data dari sdm
+// 60 data dari sdm
 $banyakDataSDM = KodeControl::$BANYAK_DATA_SDM;
 $adaSembako = false;
 
@@ -104,9 +105,14 @@ ob_clean();
 
     .table-sembako td, .table-sembako th {
       border: 1px solid black;
+       padding: 8px;
     }
     td,th{
-      padding: 8px;
+      /*padding: 8px;*/
+    }
+
+    .table-info {
+      margin: 10px;
     }
 
     .table-sembako {
@@ -141,12 +147,27 @@ ob_clean();
 </head>
 <body>
   <br><br><br><br>
-
     <p class="display-judul">Voucher Tunjangan Sembako
 <br><span class="mute"><b>
               <?php  echo $bulan."-".$periode[2] ?></b>
             </span>
     </p>
+
+    <table class="table-info">
+        <tr>
+          <td class="sub-info td-w f-12">Nama Pegawai</td>
+          <td class="f-12"><?php echo ": ".$item[1]?></td>
+        </tr>
+
+        <tr>
+          <td class="sub-info td-w f-12">Nomor Induk Yayasan</td>
+          <td class="f-12"><?php echo ": ".$item[2]?></td>
+        </tr>
+        <!-- <tr>
+          <td class="sub-1 td-w">Absensi</td>
+          <td><?php echo ": ".$item[8]?></td>
+        </tr> -->
+      </table>
 
     <table class="table-sembako">
         <tr><th>Barang</th><th>Jumlah</th></tr>
@@ -218,7 +239,7 @@ ob_clean();
     ],
     'default_font' => 'quick',
   'mode' => 'utf-8',
-  'format' => [176,340],
+  'format' => [176,360],
   'orientation' => 'P'
   ]);
 

@@ -522,11 +522,27 @@ $hari = date("N");
             <td colspan="2" class="td-nominal"><?php echo ": Rp".number_format((int)$item[49],null,null,".");?></td>
           </tr>
 
+
+          <!-- KOmponen gaji a4 -->
+          <tr><td colspan="4" style="width: 75%;" class="sub-head"><b>A4. Lain-lain</b></td></tr>
+
+
+          <tr>
+            <td class="sub-1">Bantuan Dompet Pendidikan</td>
+            <td colspan="3" class="td-nominal"><?php echo ": Rp".number_format((int)$item[59],null,null,".");?></td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="sub-1 sub-total-name">Sub total lain-lain</td>
+            
+            <td colspan="2" class="td-nominal"><?php echo ": Rp".number_format((int)($item[59]),null,null,".");?></td>
+          </tr>
+
           <tr class="tr-sub-total">
-            <td colspan="3"><b>Sub Total (A1+A2+A3)</b></td>
+            <td colspan="3"><b>Sub Total (A1+A2+A3+A4)</b></td>
 
             <?php
-            $subTotalGaji = $item[18]+$totalTunjanganTunai+(int)$item[49];
+            $subTotalGaji = $item[18]+$totalTunjanganTunai+(int)$item[49]+$item[59];
             ?>
             <td class="td-nominal"><b><?php echo "Rp".number_format(((int)$subTotalGaji),null,null,".");?></b></td>
           </tr>
