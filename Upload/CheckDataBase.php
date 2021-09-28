@@ -19,7 +19,7 @@ $adaSembako = false;
 if ($item[$banyakDataSDM] !== "") {
 
 	$adaSembako = true;
-	$barang = array_slice($item, 59);
+	$barang = array_slice($item, $banyakDataSDM);
 	$tempArray = array();
 	$resultBarang = array();
 	for ($i = 0 ; $i< count($barang) ; $i++){

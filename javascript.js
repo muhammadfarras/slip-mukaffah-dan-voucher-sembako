@@ -6,7 +6,7 @@ var nodeBat = document.getElementById("dwn_bat");
 // console.log (nodeCsvContoh);
 
 function download(filename){
-    window.location="http://192.168.1.25/sembako/aset/download.php?file="+filename;
+    window.location="http://192.168.1.16/sembako/aset/download.php?file="+filename;
 }
 
 

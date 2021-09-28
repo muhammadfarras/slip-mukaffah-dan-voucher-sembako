@@ -18,7 +18,7 @@
 				'pengambil' => array ()
 			);
 
-			$hasil = $db->selectSembakoTaken ("add-07-2021");
+			$hasil = $db->selectSembakoTaken ("add-08-2021");
 
 			$noTaken = 0;
 

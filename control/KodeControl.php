@@ -6,6 +6,6 @@
 class KodeControl
 {
 	
-	public static $BANYAK_DATA_SDM = 59;
+	public static $BANYAK_DATA_SDM = 60;
 }
 ?>

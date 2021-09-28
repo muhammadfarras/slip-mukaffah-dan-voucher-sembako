@@ -108,7 +108,7 @@ let collapseBtnProsesEmail = new Collapse (nodeBtnAndProgressEmail, {
 // }
 
 function download(filename){
-    window.location="http://192.168.1.25/sembako/aset/download.php?file="+filename;
+    window.location="http://192.168.1.16/sembako/aset/download.php?file="+filename;
 }
 
 function runAjaxCheckFileCsv(path,fileName){
@@ -164,14 +164,14 @@ savedList = runAjaxCheckFileCsv(nodePath,nodeFileName);
 // createing function that run ajax multiple time to create pdf and store to database
 function ProsessPdf(items, path){
 
-console.log (encodeURIComponent(items));
+// console.log (encodeURIComponent(items));
 	var xhttp = new XMLHttpRequest();
   	xhttp.onreadystatechange = function() {
 
 	    if ((this.readyState == 4) && (this.status == 200)){
 				console.log (this.responseText);
 	    	jumlahDataBerjalan += parseInt(this.responseText);
-	    	// console.log (items);
+	    	console.log (items);
 	    	nodeLog.innerHTML = jumlahDataBerjalan+" file telah terbuat.";
 
 	    	var prosentase  = ((jumlahDataBerjalan/banyakDataGlobal)*100)+"%";
@@ -228,7 +228,7 @@ function zipJson (path){
 	    		console.log ("Donwload ZIP");
 
 	    		// Jika berhasil download zip-nya
-	    		window.location="http://192.168.1.25/sembako/upload/downloadZip.php?path="+hasilZip.values;
+	    		window.location="http://192.168.1.16/sembako/upload/downloadZip.php?path="+hasilZip.values;
 	    	}
 	    }
 	  };
