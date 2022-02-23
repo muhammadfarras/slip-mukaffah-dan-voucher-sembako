@@ -10,7 +10,7 @@
   </thead>
   <tbody>
 		<?php
-			$hasil = $db->selectSembakoNoTaken ("add-08-2021");
+			$hasil = $db->selectSembakoNoTaken ("add-01-2022");
 
 			$noNoTaken = 0;
 			while ($data = $hasil->fetch_assoc()){

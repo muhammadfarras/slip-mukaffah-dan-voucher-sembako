@@ -1,6 +1,6 @@
 <?php
 
-require_once(__DIR__."/../../control/DbControl.php");
+require_once(dirname(__FILE__)."/../../control/DbControl.php");
 
 $data = array();
 $status = array('status' => '' ,'text' => '' , 'data' => $data);

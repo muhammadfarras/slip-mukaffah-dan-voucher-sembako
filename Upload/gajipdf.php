@@ -661,6 +661,9 @@ $hari = date("N");
                 Kepala Departemen SDM
                 <br>
                 Yayasan Pendidikan Islam Imam Ahmad bin Hanbal
+                <br>
+                <br>
+                <small class="mute">Develop by Muhammad Farras Ma'ruf</small>
               </p>
             </td>
           </tr>

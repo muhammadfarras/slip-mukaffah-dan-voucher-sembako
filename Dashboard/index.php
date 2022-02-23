@@ -41,7 +41,7 @@ include ("config.php");
 		<h2>
 			Dashboard Sistem Sembako
 		</h2>
-		
+
 	</div>
 
 	<div class="container mt-2 shadow p-3 rounded mb-5">
@@ -52,8 +52,8 @@ include ("config.php");
 			<div style="width: 70%; margin: 0 auto;">
 				<canvas id="chart-area"></canvas>
 			</div>
-			
-			
+
+
 		</div>
 
 
@@ -89,7 +89,7 @@ include ("config.php");
 			<div style="width: 100%; margin: 0 auto;">
 				<canvas id="line-area"></canvas>
 			</div>
-			
+
 		</div>
 
 	</div>
@@ -160,8 +160,8 @@ include ("config.php");
 
 <script>
 
-	var monthSelected = parseInt('09')-1;
-	var yearSelected = parseInt('2021');
+	var monthSelected = parseInt('02')-1;
+	var yearSelected = parseInt('2022');
 
 	var timeSembako = moment().set({
 
@@ -186,7 +186,7 @@ include ("config.php");
 	function allDate (){
 
 		var result = {
-			
+
 			allDates : [],
 
 			allDatesValue : [],
@@ -239,7 +239,7 @@ include ("config.php");
 				else {
 
 					result.countTaken[i-1] += 0;
-				
+
 				}
 
 				positionTakenDate += 1;
@@ -451,6 +451,6 @@ include ("config.php");
 
 	var myLineArea = new Chart (sCanvas, config);
 </script>
-	 
+
 </body>
 </html>

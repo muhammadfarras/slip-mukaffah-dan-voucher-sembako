@@ -1,9 +1,10 @@
 <?php
 // error_reporting(E_ERROR);
-require_once __DIR__."\..\aset\Configuration.php";
-require_once __DIR__."\JsonR.php";
 
-require_once __DIR__.'\../vendor/autoload.php';
+require_once (dirname(__FILE__)."/../aset/Configuration.php");
+require_once dirname(__FILE__)."/JsonR.php";
+
+require_once dirname(__FILE__).'/../vendor/autoload.php';
 
 
 
@@ -22,7 +23,7 @@ class DbControl
 	function __construct()
 	{
 		
-		$dotenv = Dotenv\Dotenv::createImmutable(__DIR__."/..");
+		$dotenv = Dotenv\Dotenv::createImmutable(dirname(__FILE__)."/..");
 		$dotenv->load();
 
 

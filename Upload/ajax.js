@@ -8,6 +8,9 @@ var nodePath = document.getElementById ("path").innerHTML;
 var nodeFileName = document.getElementById ("file-name").innerHTML;
 var nodePdfPath = document.getElementById ("dir_pdf_path").innerHTML;
 var nodeBaseName = document.getElementById ("base_name").innerHTML;
+var nodeServerName = document.getElementById("server-name").innerHTML
+var nodeServerPort = document.getElementById("server-port").innerHTML
+var nodeServerScheme = document.getElementById("request-scheme").innerHTML
 var nodeBtnProses = document.getElementById ("btn_proses");
 var nodeBtnProsesDb = document.getElementById("btn_proses_db");
 var nodeBtnProsesEmail = document.getElementById("btn_proses_email");
@@ -108,7 +111,14 @@ let collapseBtnProsesEmail = new Collapse (nodeBtnAndProgressEmail, {
 // }
 
 function download(filename){
-    window.location="http://192.168.1.16/sembako/aset/download.php?file="+filename;
+
+	// Create dynamic URL. so whenever there is change on ip number, we dont have to manually edit these URL
+	window.location=nodeServerScheme+"://"+nodeServerName+":"+nodeServerPort+"/sembako/aset/download.php?file="+filename
+
+    /* 
+	DEPRECATED
+	window.location="http://192.168.1.236:41062/sembako/aset/download.php?file="+filename;
+	*/
 }
 
 function runAjaxCheckFileCsv(path,fileName){
@@ -220,6 +230,7 @@ function zipJson (path){
   	xhttp.onreadystatechange = function() {
 
 	    if ((this.readyState == 4) && (this.status == 200)){
+			// console.log (this.responseText)
 	    	var hasilZip = JSON.parse (this.responseText);
 	    	// console.log (hasilZip);
 
@@ -228,8 +239,13 @@ function zipJson (path){
 	    		console.log ("Donwload ZIP");
 
 	    		// Jika berhasil download zip-nya
-	    		window.location="http://192.168.1.16/sembako/upload/downloadZip.php?path="+hasilZip.values;
-	    	}
+				
+				window.location= nodeServerScheme+"://"+nodeServerName+":"+nodeServerPort+"/sembako/Upload/downloadZip.php?path="+hasilZip.values
+				/*
+				DEPRECATED
+	    		window.location="http://192.168.1.236:41062/sembako/upload/downloadZip.php?path="+hasilZip.values;
+				*/
+			}
 	    }
 	  };
 	  xhttp.open("GET", "createZip.php?path="+path, true);

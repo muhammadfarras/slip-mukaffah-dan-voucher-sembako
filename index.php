@@ -1,7 +1,8 @@
 <?php
 ob_start();
 
-
+// echo "<pre>";
+// print_r ($_SERVER);
 ?>
 
 <!DOCTYPE html>
@@ -64,6 +65,10 @@ ob_start();
 		<input class="btn btn-primary mt-3" type="submit" name="submit" value="Upload File Sembako">
 	</form>
 	</div>
+
+	<p class="d-none" id="server-name"><?php echo $_SERVER['SERVER_NAME']; ?></p>
+	<p class="d-none" id="server-port"><?php echo $_SERVER['SERVER_PORT']; ?></p>
+	<p class="d-none" id="request-scheme"><?php echo $_SERVER['REQUEST_SCHEME']; ?></p>
 
 	
 

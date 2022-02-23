@@ -20,7 +20,7 @@ $time = $_GET['time'];
 // ["add-09-2021","latihan september 3","1945-3","SDIT Anak Shalih","farras@anakshalihbogor.sch.id","L","Tetap","Kepala Divisi ","0","0","0","","","K-4","0","IIIA","4","0","1450000","650000","400000","400000","0","0","460000","0","0","0","0","0","295300","79000","300000","1595037","733","0","","0","0","0","0","0","0","0","1107194","0","6196572","733","2820041","2820041","2820041","2269337","733","0","0","0","0","0","0","567235","Beras 'Sania' (kg)","15","Minyak Goreng 'Sania' (kg)","2","Gula Pasir 'GMP' (kg)","2","Tepung Terigu 'Sania' (kg)","1","Mentega 'Simas Palmia' (200 gr)","1","Saos Sambal Ekstra Pedas 'Sasa' (botol 340 ml)","1","Kecap 'Bango' (pouch 520 ml)","1","Kantong Plastik 'Loco'","1"]
 
 
-require_once __DIR__."/../control/KodeControl.php";
+require_once dirname(__FILE__)."/../control/KodeControl.php";
 
 // 60 data dari sdm
 $banyakDataSDM = KodeControl::$BANYAK_DATA_SDM;

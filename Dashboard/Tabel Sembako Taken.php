@@ -12,13 +12,13 @@
 		<?php
 
 			$infPengambil = array(
-				
+
 				'tanggal' => array(),
 
 				'pengambil' => array ()
 			);
 
-			$hasil = $db->selectSembakoTaken ("add-08-2021");
+			$hasil = $db->selectSembakoTaken ("add-01-2022");
 
 			$noTaken = 0;
 

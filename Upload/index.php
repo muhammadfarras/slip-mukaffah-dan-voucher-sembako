@@ -1,8 +1,8 @@
 <?php
 ob_start();
 
-require_once (__DIR__."/../control/FileControl.php");
-require_once (__DIR__."/../control/DirControl.php");
+require_once (dirname(__FILE__)."/../control/FileControl.php");
+require_once (dirname(__FILE__)."/../control/DirControl.php");
 
 $fileName = md5(time());
 $targetFile = "../aset/uploaded/".$fileName;
@@ -184,6 +184,11 @@ else {
 			
 		</div>
 	</div>
+
+	
+	<p class="d-none" id="server-name"><?php echo $_SERVER['SERVER_NAME']; ?></p>
+	<p class="d-none" id="server-port"><?php echo $_SERVER['SERVER_PORT']; ?></p>
+	<p class="d-none" id="request-scheme"><?php echo $_SERVER['REQUEST_SCHEME']; ?></p>
 
 	<script type="module">
 		
